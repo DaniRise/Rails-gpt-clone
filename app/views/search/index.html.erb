@@ -1,0 +1,15 @@
+<h1>Chat GPT</h1>
+
+<%= form_tag search_path, method: :get, id: "search-form" do %>
+  <%= text_field_tag :q, nil, placeholder: "Que desea?..." %>
+  <%= submit_tag "Buscar" %>
+<% end %>
+
+<% if @results.present? %>
+  <h2>Resultados de la búsqueda:</h2>
+  <ul>
+    <% @results.each do |result| %>
+      <li><%= result %></li>
+    <% end %>
+  </ul>
+<% end %>
