@@ -6,7 +6,7 @@ class SearchController < ApplicationController
         'https://api.openai.com/v1/engines/davinci-codex/completions',
         headers: {
           'Content-Type' => 'application/json',
-          'Authorization' => "Bearer #{ENV['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']}"
+          'Authorization' => "Bearer #{ENV['API-KEY-HERE']}"
         },
         body: {
           'prompt': query,
